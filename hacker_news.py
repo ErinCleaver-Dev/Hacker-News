@@ -25,7 +25,7 @@ def get_hacker_news(res, boolen = False):
                         url = link['href']
                         title = link.getText()
                         if(url.startswith('item?id')):
-                            hacker_news.append({'score': score, 'title': title, 'url': 'https://news.ycombinator.com/' + url})
+                            continue
                         else:
                             hacker_news.append({'score': score, 'title': title, 'url': url})
         except AttributeError as err:
